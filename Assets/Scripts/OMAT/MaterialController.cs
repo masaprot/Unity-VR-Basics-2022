@@ -19,4 +19,13 @@ public class MaterialController : MonoBehaviour
     {
 
     }
+
+    public void ToggleMaterial()
+    {
+        if (controlledMesh.material =)
+        {
+
+        }
+
+    }
 }

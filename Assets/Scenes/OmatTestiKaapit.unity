@@ -2830,7 +2830,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0.013, y: 0, z: -0.015}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 2.2841253, y: 0.8220094, z: 1.0084695}
+  m_ConnectedAnchor: {x: 2.2757, y: 0.4812565, z: 1.0084697}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -3136,7 +3136,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0.01, y: 0, z: -0.025}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 2.2679288, y: 0.899413, z: 1.0084695}
+  m_ConnectedAnchor: {x: 2.4759288, y: 0.59460986, z: 1.0097277}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -3878,6 +3878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 944859874}
   - component: {fileID: 944859873}
+  - component: {fileID: 944859875}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -3962,6 +3963,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: 99.282, z: 0}
+--- !u!114 &944859875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944859872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1004749264
 GameObject:
   m_ObjectHideFlags: 0
@@ -4175,7 +4199,7 @@ MonoBehaviour:
   meshMaterials:
   - {fileID: 2100000, guid: db1fcddf222ee3d489db86c909c0846d, type: 2}
   - {fileID: 2100000, guid: 3aea086c03c7d8143b5507ff23f42cf5, type: 2}
-  - {fileID: 2100000, guid: 3aea086c03c7d8143b5507ff23f42cf5, type: 2}
+  - {fileID: 2100000, guid: 3deb278f301603945b471a247fdf9ebd, type: 2}
 --- !u!1 &1133569640
 GameObject:
   m_ObjectHideFlags: 0
@@ -4379,7 +4403,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0.012, y: 0, z: -0.05}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 2.2629325, y: 0.45113403, z: 1.0084696}
+  m_ConnectedAnchor: {x: 2.242151, y: -0.6293448, z: 1.0084698}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
