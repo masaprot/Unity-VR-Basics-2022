@@ -24,9 +24,9 @@ public class MaterialManager : MonoBehaviour
     public Material mattaValkoinen;
 
     //Nuppi & Kahva & Hana Materiaalit
-    public Material puu;
-    public Material metalli;
-    public Material messinki;
+    //public Material puu;
+    //public Material metalli;
+    //public Material messinki;
     public Material mattaPunainen;
 
     //Taso Materiaalit
@@ -40,10 +40,10 @@ public class MaterialManager : MonoBehaviour
             MaterialController.controlledMesh.material = mattaVaaleanpunainen;
         }
 
-        foreach (var KnobMaterialController in controlledKnobMeshes)
+       /* foreach (var KnobMaterialController in controlledKnobMeshes)
         {
             KnobMaterialController.controlledKnobMesh.material = puu;
-        }
+        }*/
 
         foreach (var HandleMaterialController in controlledHandleMeshes)
         {
@@ -60,11 +60,23 @@ public class MaterialManager : MonoBehaviour
             TasoMaterialController.controlledTasoMesh.material = mattaSininen;
         }
 
-        foreach (var PeitelevyMaterialController in controlledPeitelevyMaterial)
+        /*foreach (var PeitelevyMaterialController in controlledPeitelevyMaterial)
         {
             PeitelevyMaterialController.controlledPeitelevyoMesh.material = puu;
 
+        } */
+
+
+
+    }
+
+    public void ChangeToValkoinen()
+    {
+        foreach (var MaterialController in controlledMeshes)
+        {
+            MaterialController.controlledMesh.material = mattaValkoinen;
         }
+
     }
 
 

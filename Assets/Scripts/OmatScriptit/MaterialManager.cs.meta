@@ -3,7 +3,14 @@ guid: 1fef35f7ce30e414cb7732580106f2b2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - mattaVaaleanpunainen: {fileID: 2100000, guid: cd5bffb8731e24112a2ae4f34e18a66d, type: 2}
+  - mattaValkoinen: {fileID: 2100000, guid: db1fcddf222ee3d489db86c909c0846d, type: 2}
+  - puu: {instanceID: 0}
+  - metalli: {instanceID: 0}
+  - messinki: {instanceID: 0}
+  - mattaPunainen: {fileID: 2100000, guid: 1dcf4db9202e446f78e6e404dde314f5, type: 2}
+  - mattaSininen: {fileID: 2100000, guid: fe3d5c978396741f385513f5c1060cab, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
