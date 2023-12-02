@@ -24,7 +24,7 @@ public class MaterialManager : MonoBehaviour
     public Material mattaValkoinen;
 
     //Nuppi & Kahva & Hana Materiaalit
-    //public Material puu;
+    public Material puu;
     //public Material metalli;
     //public Material messinki;
     public Material mattaPunainen;
