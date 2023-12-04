@@ -6,6 +6,12 @@ public class PanelController : MonoBehaviour
 {
     public GameObject panel;
 
+
+    private void Start()
+    {
+        panel.SetActive(false);
+    }
+
     public void OpenPanel()
     {
         if (panel != null)

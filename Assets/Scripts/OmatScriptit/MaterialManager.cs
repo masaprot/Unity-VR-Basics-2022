@@ -6,7 +6,6 @@ public class MaterialManager : MonoBehaviour
 {
     // NAPPULA ERI MATERIAALIKOKONAISUUKSILLE : Neutraali, Värikäs (tai Puu/Vihreä) , Tumma.
 
-
     public List<MaterialController> controlledMeshes; // ovet
 
     public List<KnobMaterialController> controlledKnobMeshes; // nappivetimet
@@ -22,42 +21,44 @@ public class MaterialManager : MonoBehaviour
     //Ovi materiaalit
     public Material mattaVaaleanpunainen;
     public Material mattaValkoinen;
+    public Material mattaHarmaa;
 
     //Nuppi & Kahva & Hana Materiaalit
     public Material puu;
     public Material harjattumetalli;
-    //public Material messinki;
     public Material mattaPunainen;
 
     //Taso Materiaalit
     public Material mattaSininen;
+    public Material terrazzo;
 
 
     public void ChangeToVärikäs()
     {
+        //Ovet & peitelevyt
         foreach (var MaterialController in controlledMeshes)
         {
             MaterialController.controlledMesh.material = mattaVaaleanpunainen;
         }
-
-       /* foreach (var KnobMaterialController in controlledKnobMeshes)
+        //Nupit
+        foreach (var KnobMaterialController in controlledKnobMeshes)
         {
             KnobMaterialController.controlledKnobMesh.material = puu;
-        }*/
-
+        }
+       // Vetimet
         foreach (var HandleMaterialController in controlledHandleMeshes)
         {
             HandleMaterialController.controlledHandleMesh.material = mattaPunainen;
         }
-
+        //Taso
+        foreach (var TasoMaterialController in controlledTasoMeshes)
+        {
+            TasoMaterialController.controlledTasoMesh.material = terrazzo;
+        }
+        //Hana
         foreach (var TapMaterialController in controlledTapMeshes)
         {
             TapMaterialController.controlledTapMesh.material = mattaPunainen;
-        }
-
-        foreach (var TasoMaterialController in controlledTasoMeshes)
-        {
-            TasoMaterialController.controlledTasoMesh.material = mattaSininen;
         }
 
         /*foreach (var PeitelevyMaterialController in controlledPeitelevyMaterial)
@@ -66,15 +67,64 @@ public class MaterialManager : MonoBehaviour
 
         } */
 
-
-
     }
 
     public void ChangeToValkoinen()
     {
+        //Ovet & peitelevyt
         foreach (var MaterialController in controlledMeshes)
         {
             MaterialController.controlledMesh.material = mattaValkoinen;
+        }
+        //Nupit
+        foreach (var KnobMaterialController in controlledKnobMeshes)
+        {
+            KnobMaterialController.controlledKnobMesh.material = harjattumetalli;
+        }
+        // Vetimet
+        foreach (var HandleMaterialController in controlledHandleMeshes)
+        {
+            HandleMaterialController.controlledHandleMesh.material = harjattumetalli;
+        }
+        //Taso
+        foreach (var TasoMaterialController in controlledTasoMeshes)
+        {
+            TasoMaterialController.controlledTasoMesh.material = harjattumetalli;
+        }
+        //Hana
+        foreach (var TapMaterialController in controlledTapMeshes)
+        {
+            TapMaterialController.controlledTapMesh.material = harjattumetalli;
+        }
+
+    }
+
+    public void ChangeToTumma()
+    {
+        //Ovet & peitelevyt
+        foreach (var MaterialController in controlledMeshes)
+        {
+            MaterialController.controlledMesh.material = mattaHarmaa;
+        }
+        //Nupit
+        foreach (var KnobMaterialController in controlledKnobMeshes)
+        {
+            KnobMaterialController.controlledKnobMesh.material = puu;
+        }
+        // Vetimet
+        foreach (var HandleMaterialController in controlledHandleMeshes)
+        {
+            HandleMaterialController.controlledHandleMesh.material = puu;
+        }
+        //Taso
+        foreach (var TasoMaterialController in controlledTasoMeshes)
+        {
+            TasoMaterialController.controlledTasoMesh.material = terrazzo;
+        }
+        //Hana
+        foreach (var TapMaterialController in controlledTapMeshes)
+        {
+            TapMaterialController.controlledTapMesh.material = harjattumetalli;
         }
 
     }
