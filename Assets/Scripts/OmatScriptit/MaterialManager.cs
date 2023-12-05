@@ -27,11 +27,18 @@ public class MaterialManager : MonoBehaviour
     public Material puu;
     public Material harjattumetalli;
     public Material mattaPunainen;
+    public Material offWhite;
 
     //Taso Materiaalit
     public Material mattaSininen;
     public Material terrazzo;
+    public Material terrazzoBeige;
+    public Material terrazzoSininen;
 
+    private void Start()
+    {
+        ChangeToValkoinen();
+    }
 
     public void ChangeToVärikäs()
     {
@@ -40,6 +47,12 @@ public class MaterialManager : MonoBehaviour
         {
             MaterialController.controlledMesh.material = mattaVaaleanpunainen;
         }
+        //Peitelevyt
+        foreach (var PeitelevyMaterialController in controlledPeitelevyMaterial)
+        {
+            PeitelevyMaterialController.controlledPeitelevyoMesh.material = mattaVaaleanpunainen;
+
+        } 
         //Nupit
         foreach (var KnobMaterialController in controlledKnobMeshes)
         {
@@ -53,7 +66,7 @@ public class MaterialManager : MonoBehaviour
         //Taso
         foreach (var TasoMaterialController in controlledTasoMeshes)
         {
-            TasoMaterialController.controlledTasoMesh.material = terrazzo;
+            TasoMaterialController.controlledTasoMesh.material = mattaSininen;
         }
         //Hana
         foreach (var TapMaterialController in controlledTapMeshes)
@@ -61,25 +74,24 @@ public class MaterialManager : MonoBehaviour
             TapMaterialController.controlledTapMesh.material = mattaPunainen;
         }
 
-        /*foreach (var PeitelevyMaterialController in controlledPeitelevyMaterial)
-        {
-            PeitelevyMaterialController.controlledPeitelevyoMesh.material = puu;
-
-        } */
-
     }
 
     public void ChangeToValkoinen()
     {
-        //Ovet & peitelevyt
+        //Ovet 
         foreach (var MaterialController in controlledMeshes)
         {
             MaterialController.controlledMesh.material = mattaValkoinen;
         }
+        //Peitelevyt
+        foreach (var PeitelevyMaterialController in controlledPeitelevyMaterial)
+        {
+            PeitelevyMaterialController.controlledPeitelevyoMesh.material = mattaValkoinen;
+        }
         //Nupit
         foreach (var KnobMaterialController in controlledKnobMeshes)
         {
-            KnobMaterialController.controlledKnobMesh.material = harjattumetalli;
+            KnobMaterialController.controlledKnobMesh.material = offWhite;
         }
         // Vetimet
         foreach (var HandleMaterialController in controlledHandleMeshes)
@@ -89,7 +101,7 @@ public class MaterialManager : MonoBehaviour
         //Taso
         foreach (var TasoMaterialController in controlledTasoMeshes)
         {
-            TasoMaterialController.controlledTasoMesh.material = harjattumetalli;
+            TasoMaterialController.controlledTasoMesh.material = terrazzoBeige;
         }
         //Hana
         foreach (var TapMaterialController in controlledTapMeshes)
@@ -101,10 +113,15 @@ public class MaterialManager : MonoBehaviour
 
     public void ChangeToTumma()
     {
-        //Ovet & peitelevyt
+        //Ovet
         foreach (var MaterialController in controlledMeshes)
         {
             MaterialController.controlledMesh.material = mattaHarmaa;
+        }
+        //Peitelevyt
+        foreach (var PeitelevyMaterialController in controlledPeitelevyMaterial)
+        {
+            PeitelevyMaterialController.controlledPeitelevyoMesh.material = mattaHarmaa;
         }
         //Nupit
         foreach (var KnobMaterialController in controlledKnobMeshes)
@@ -119,7 +136,7 @@ public class MaterialManager : MonoBehaviour
         //Taso
         foreach (var TasoMaterialController in controlledTasoMeshes)
         {
-            TasoMaterialController.controlledTasoMesh.material = terrazzo;
+            TasoMaterialController.controlledTasoMesh.material = terrazzoBeige;
         }
         //Hana
         foreach (var TapMaterialController in controlledTapMeshes)
